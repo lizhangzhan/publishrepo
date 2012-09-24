@@ -1,3 +1,5 @@
+import random
+
 def getDuplicated(nums, n):
     start = 0
     nInd = nums[0]
@@ -20,8 +22,13 @@ def getDuplicated(nums, n):
     return -1
 
 if __name__ == "__main__":
-    nums = [1, 7, 2, 4, 6, 8, 3, 5, 9, 0]
-    dup = getDuplicated(nums, 10)
+    N = 20 # parameter
+    nums = []
+    for i in xrange(N):
+        nums.append(random.randrange(0, N))
+    print "Array values: "
+    print nums
+    dup = getDuplicated(nums, N)
     if dup >= 0:
         print "Find %d is one of duplicated numbers" % dup
     else:
