@@ -108,7 +108,7 @@ class BSTree:
             count += 1
         return results
 
-def equal(actual, expected, m):
+def iseual(actual, expected, m):
     for i in xrange(m):
         if actual[i] != expected[i]:
             return False
@@ -124,5 +124,5 @@ if __name__ == "__main__":
 
     results = tree.findNeighbors(x, m)
     expected = [339, 330]
-    assert(equal(results, expected, m))
+    assert(isequal(results, expected, m))
     print "pass!"
