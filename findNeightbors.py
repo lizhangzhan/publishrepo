@@ -108,13 +108,21 @@ class BSTree:
             count += 1
         return results
 
-def equal(actual, expected):
-    
+def equal(actual, expected, m):
+    for i in xrange(m):
+        if actual[i] != expected[i]:
+            return False
+    return True 
 if __name__ == "__main__":
     tree = BSTree()
     datas = [2, 252, 401, 398, 330, 344, 397, 339, 323]
     random.shuffle(datas)
+    x = 344
+    m = 2
     for item in datas:
         tree.insert_node(item)
 
-    results = tree.findNeighbors(344, 2)
+    results = tree.findNeighbors(x, m)
+    expected = [339, 330]
+    assert(equal(results, expected, m))
+    print "pass!"
