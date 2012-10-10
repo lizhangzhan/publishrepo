@@ -21,12 +21,6 @@ class Node:
         self.parent = None
         self.data = data
 
-class HNode:
-
-    def __init__(self, node, diff):
-        self.node = node
-        self.diff = abs(diff)
-
 class BSTree:
     def __init__(self):
         #initializes the root member
