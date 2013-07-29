@@ -1,7 +1,14 @@
 # !/usr/bin/env python
+# -*- coding: utf-8 -*-
 import collections
 import os
+"""
+ A naive suffixtree implementation according to Ukkonen's paper.
+ The references listed as below,
+ [1] suffix tree,  http://www.cs.helsinki.fi/u/ukkonen/SuffixT1withFigs.pdf
+ [2] Ukkonen's suffix tree algorithm in plain English, http://stackoverflow.com/questions/9452701/ukkonens-suffix-tree-algorithm-in-plain-english
 
+"""
 class Node(object):
     def __init__(self, nid, leaf=True):
         self.id = nid
