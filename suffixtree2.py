@@ -2,13 +2,7 @@
 # -*- coding: utf-8 -*-
 import collections
 import os
-"""
- A naive suffixtree implementation according to Ukkonen's paper.
- The references listed as below,
- [1] suffix tree,  http://www.cs.helsinki.fi/u/ukkonen/SuffixT1withFigs.pdf
- [2] Ukkonen's suffix tree algorithm in plain English, http://stackoverflow.com/questions/9452701/ukkonens-suffix-tree-algorithm-in-plain-english
 
-"""
 class Node(object):
     def __init__(self, nid, leaf=True):
         self.id = nid
@@ -64,7 +58,7 @@ class SuffixTree(object):
         self.seq = seq
         self.elements = set(seq)
         self.size = len(self.seq)
-        self.root = Node(0, None)
+        self.root = Node(0)
         self.node_list = [self.root]
         self.edge_dict = collections.defaultdict()
         self.active_point = ActivePoint(self.root, None, 0)
@@ -159,6 +153,8 @@ class SuffixTree(object):
     def draw_graph(self, fn):
         fp = open(fn, 'wb')
         fp.write("digraph G {\n")
+        fp.write("rankdir=LR;\n")
+        fp.write("size=\"8,5\"\n")
         for node in sorted(self.node_list):
             fp.write(node.explain())
         
@@ -171,8 +167,9 @@ class SuffixTree(object):
         os.system(cmd)
 
 if __name__ == "__main__":
-    suffixtree = SuffixTree("abcabxabcdabce")
+    suffixtree = SuffixTree("abcabxabcdabc$")
     #suffixtree = SuffixTree("banana$")
+    #suffixtree = SuffixTree("abcd$")
     suffixtree.build_suffixTree()
     suffixtree.draw_graph("naive_suffix_tree")
         
