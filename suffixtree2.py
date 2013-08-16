@@ -144,9 +144,7 @@ class SuffixTree(object):
                 self.active_point.edge = None
                 self.insert_suffixes(start)
                 self.suffix_link = None # reset suffix_link 
-                assert self.active_point.length == 0
-                assert self.active_point.node.id == 0
-                assert self.reminder == 1
+
 
                 
 
