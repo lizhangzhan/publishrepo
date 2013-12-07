@@ -1,6 +1,11 @@
 # !/usr/bin/python
 import collections
 """
+  Implement a pageranking algorithm in python.
+  Reference:
+  [1] pagerank wikipage, http://en.wikipedia.org/wiki/PageRank
+  [2] A nice introduction to pageranking, http://www.ams.org/samplings/feature-column/fcarc-pagerank
+  
   Describe a directed graph with a represenation similar to adjacency list.
   With a difference, we do not directly store all tail nodes adjacient
   to a node instead of all head nodes adjacent to a node.
