@@ -8,7 +8,7 @@ from itertools import groupby
    @author lizhangzhan@outlook.com
     
    For a layman, I have experienced how difficult to understand and apply mcmc algorithm flexibly.
-   Hope this toy example is useful to understand the basic theory in it.
+   Hope this toy example is useful to understand the basic theory.
    References:
    [1] http://en.wikipedia.org/wiki/Markov_chain_Monte_Carlo
    [2] http://cos.name/2013/01/lda-math-mcmc-and-gibbs-sampling/
