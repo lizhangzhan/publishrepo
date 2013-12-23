@@ -88,16 +88,15 @@ class MCMC(object):
     """
     def sample1d(self, num):
         x = 0
-        samples = [x]
         for i in range(num):
             y = self.__next(self.transProbs[x])
             alpha = self.__alpha(x, y)
             u = random.random()
             if u < alpha:
                 x = y
-            samples.append(x)
-
-        return samples
+            # weaken the dependence between samples
+            if i % 5 == 0:
+                yield x 
 
 def test1(N, pi):
     # a proposal transition matrix
@@ -110,10 +109,13 @@ def test1(N, pi):
         print "prob(%d) = %f" % (i, sp[i])
 
     samples = simulator.sample1d(N)
-    counter = [len(list(group)) for key, group in groupby(sorted(samples))]
+    counter = [0 for i in range(len(pi))]
+    for sample in samples:
+        counter[sample] += 1
+    norm = sum(counter)
     print "predicted distribution:"
     for i in xrange(len(pi)):
-        print "prob(%d) = %f" % (i, 1.0 * counter[i] / N)
+        print "prob(%d) = %f" % (i, 1.0 * counter[i] / norm)
     
     print "expected distribution:"
     for i in xrange(len(pi)):
@@ -125,28 +127,31 @@ def test2(N, pi):
     
     simulator = MCMC(pi, transProbs)
     sp = simulator.convergeprob()
-    print "The stationary distribution of the proposal transition matrix:"
+    print "The stationary distribution of the proposal transion matrix"
     for i in xrange(len(sp)):
         print "prob(%d) = %f" % (i, sp[i])
 
     samples = simulator.sample1d(N)
-    counter = [len(list(group)) for key, group in groupby(sorted(samples))]
+    counter = [0 for i in range(len(pi))]
+    for sample in samples:
+        counter[sample] += 1
+    norm = sum(counter)
     print "predicted distribution:"
     for i in xrange(len(pi)):
-        print "prob(%d) = %f" % (i, 1.0 * counter[i] / N)
+        print "prob(%d) = %f" % (i, 1.0 * counter[i] / norm) 
     
     print "expected distribution:"
     for i in xrange(len(pi)):
         print "prob(%d) = %f" %(i, pi[i])
 def main():
-    N = 50000
+    N = 500000
     # the expected target distribution
     pi = [0.6, 0.3, 0.1]
     print "Testing 1"
     print "----------------------------------------"
     test1(N, pi)
 
-    print "Testing 2"
+    print "\nTesting 2 with different proposal transition prob"
     print "----------------------------------------"
     test2(N, pi)
 
