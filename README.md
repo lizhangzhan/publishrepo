@@ -1,4 +1,8 @@
-publishrepo
-===========
+1. Compile
+  python setup.py build_ext --inplace
 
-Publish some codes in this repositoy
+2. Dependency installation
+  pip install -r requirement.txt
+
+3. Run
+  python ftrl4mlp_test.py ...

@@ -1,0 +1,33 @@
+!_TAG_FILE_SORTED	2	/0=unsorted, 1=sorted, 2=foldcase/
+build_ext	/Users/lizhangzhan/Workspace/python/publishrepo/setup.py	/^from Cython.Distutils import build_ext$/;"	i	language:Python
+cmdclass	/Users/lizhangzhan/Workspace/python/publishrepo/setup.py	/^    cmdclass={'build_ext': build_ext},$/;"	v	language:Python
+description	/Users/lizhangzhan/Workspace/python/publishrepo/setup.py	/^    description='Experiment code for online mlp',$/;"	v	language:Python
+Extension	/Users/lizhangzhan/Workspace/python/publishrepo/setup.py	/^from setuptools import setup, Extension$/;"	i	language:Python
+extra_compile_args	/Users/lizhangzhan/Workspace/python/publishrepo/setup.py	/^                           extra_compile_args=['-O3']),$/;"	v	language:Python
+extra_compile_args	/Users/lizhangzhan/Workspace/python/publishrepo/setup.py	/^                           extra_compile_args=['-O3']),$/;"	v	language:Python
+extra_compile_args	/Users/lizhangzhan/Workspace/python/publishrepo/setup.py	/^                           extra_compile_args=['-O3']),$/;"	v	language:Python
+extra_compile_args	/Users/lizhangzhan/Workspace/python/publishrepo/setup.py	/^                           extra_compile_args=['-O3']),$/;"	v	language:Python
+extra_compile_args	/Users/lizhangzhan/Workspace/python/publishrepo/setup.py	/^                           extra_compile_args=['-O3']),$/;"	v	language:Python
+extra_compile_args	/Users/lizhangzhan/Workspace/python/publishrepo/setup.py	/^                           extra_compile_args=['-O3']),$/;"	v	language:Python
+extra_compile_args	/Users/lizhangzhan/Workspace/python/publishrepo/setup.py	/^                           extra_compile_args=['-O3']),$/;"	v	language:Python
+ext_modules	/Users/lizhangzhan/Workspace/python/publishrepo/setup.py	/^    ext_modules=[Extension('com.dp.mlp.ftrl_mlp',$/;"	v	language:Python
+include_dirs	/Users/lizhangzhan/Workspace/python/publishrepo/setup.py	/^                           include_dirs=[np.get_include(), '.'],$/;"	v	language:Python
+include_dirs	/Users/lizhangzhan/Workspace/python/publishrepo/setup.py	/^                           include_dirs=[np.get_include(), '.'],$/;"	v	language:Python
+include_dirs	/Users/lizhangzhan/Workspace/python/publishrepo/setup.py	/^                           include_dirs=[np.get_include(), '.'],$/;"	v	language:Python
+include_dirs	/Users/lizhangzhan/Workspace/python/publishrepo/setup.py	/^                           include_dirs=[np.get_include(), '.'],$/;"	v	language:Python
+include_dirs	/Users/lizhangzhan/Workspace/python/publishrepo/setup.py	/^                           include_dirs=[np.get_include(), '.'],$/;"	v	language:Python
+include_dirs	/Users/lizhangzhan/Workspace/python/publishrepo/setup.py	/^                           include_dirs=[np.get_include(), '.'],$/;"	v	language:Python
+include_dirs	/Users/lizhangzhan/Workspace/python/publishrepo/setup.py	/^                           include_dirs=[np.get_include(), '.'],$/;"	v	language:Python
+install_requires	/Users/lizhangzhan/Workspace/python/publishrepo/setup.py	/^    install_requires=[$/;"	v	language:Python
+libraries	/Users/lizhangzhan/Workspace/python/publishrepo/setup.py	/^                           libraries=[],$/;"	v	language:Python
+libraries	/Users/lizhangzhan/Workspace/python/publishrepo/setup.py	/^                           libraries=[],$/;"	v	language:Python
+libraries	/Users/lizhangzhan/Workspace/python/publishrepo/setup.py	/^                           libraries=[],$/;"	v	language:Python
+libraries	/Users/lizhangzhan/Workspace/python/publishrepo/setup.py	/^                           libraries=[],$/;"	v	language:Python
+libraries	/Users/lizhangzhan/Workspace/python/publishrepo/setup.py	/^                           libraries=[],$/;"	v	language:Python
+libraries	/Users/lizhangzhan/Workspace/python/publishrepo/setup.py	/^                           libraries=[],$/;"	v	language:Python
+libraries	/Users/lizhangzhan/Workspace/python/publishrepo/setup.py	/^                           libraries=[],$/;"	v	language:Python
+long_description	/Users/lizhangzhan/Workspace/python/publishrepo/setup.py	/^    long_description=read_md('README.md'),$/;"	v	language:Python
+np	/Users/lizhangzhan/Workspace/python/publishrepo/setup.py	/^import numpy as np$/;"	i	language:Python
+packages	/Users/lizhangzhan/Workspace/python/publishrepo/setup.py	/^    packages = ['com.dp',$/;"	v	language:Python
+read_md	/Users/lizhangzhan/Workspace/python/publishrepo/setup.py	/^read_md = lambda f: open(f, 'r').read()$/;"	v	language:Python
+setup	/Users/lizhangzhan/Workspace/python/publishrepo/setup.py	/^from setuptools import setup, Extension$/;"	i	language:Python
